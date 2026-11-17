@@ -35,7 +35,7 @@ python -c 'import angr, bcc; print("angr", angr.__version__); print("BCC availab
 python -m compass --help
 ```
 
-For the existing Windows checkout, its WSL path is `/mnt/f/转投/BinAI/COMPASS`. The virtual environment must use a Python version compatible with the installed system BCC bindings; `--system-site-packages` makes those bindings visible.
+Set `COMPASS_ROOT` to the Linux path of your checkout, including when using WSL. The virtual environment must use a Python version compatible with the installed system BCC bindings; `--system-site-packages` makes those bindings visible.
 
 Run commands from `COMPASS_ROOT`. Global `--config` precedes `offline`, `monitor`, or `investigate`. Privileged capture commands below explicitly use the virtual-environment interpreter.
 
