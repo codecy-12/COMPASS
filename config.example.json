@@ -1,0 +1,38 @@
+{
+  "workspace": ".compass",
+  "llm": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/chat/completions",
+    "model": "deepseek-v3.2",
+    "api_key": "",
+    "timeout_seconds": 60.0,
+    "temperature": 0.0
+  },
+  "static": {
+    "backend": "auto",
+    "ida_path": "",
+    "objdump_path": "objdump",
+    "load_external_libraries": false
+  },
+  "dynamic": {
+    "perf_path": "perf",
+    "use_lbr": true,
+    "lbr_sample_period": 4000,
+    "use_ebpf": true,
+    "known_producer_patterns": ["push", "enqueue", "submit", "dispatch", "wake", "notify", "write"],
+    "known_consumer_patterns": ["pop", "dequeue", "take", "consume", "wait", "read"]
+  },
+  "monitor": {
+    "sysdig_path": "sysdig",
+    "use_modern_ebpf": true,
+    "snaplen": 65535,
+    "capture_user_stacks": true,
+    "capture_bytes": 60000
+  },
+  "investigation": {
+    "symbolic_backend": "angr",
+    "input_window_seconds": 0.0,
+    "concretize_captured_input": true,
+    "simprocedure_manifest": ""
+  }
+}
